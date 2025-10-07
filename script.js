@@ -78,4 +78,18 @@ animatedBTN.addEventListener("click", () => {
 });
 
 //Zadanie 1_4
-
+const btn4 = document.querySelector("#ex4_button");
+const bgColor = [
+  "red",
+  "green",
+  "yellow",
+  "blue",
+  "black",
+  "white",
+  "purple",
+  "",
+];
+btn4.addEventListener("click", () => {
+  const randomColor = bgColor[Math.floor(Math.random() * bgColor.length)];
+  document.body.style.backgroundColor = randomColor;
+});
