@@ -45,13 +45,37 @@ dragDropElem.addEventListener("dragstart", (e) => {
 container3_2.addEventListener("dragover", (e) => {
   e.preventDefault();
 });
+
 container3_2.addEventListener("drop", (e) => {
   container3_2.prepend(dragDropElem);
 });
+
 //Drag&Drop przenoszenie do pierwszego elementu
 container3_1.addEventListener("dragover", (e) => {
   e.preventDefault();
 });
+
 container3_1.addEventListener("drop", (e) => {
   container3_1.prepend(dragDropElem);
 });
+
+//ZADANIA DODATKOWE
+
+//Zadanie 4 animacja elementów
+const animatedElement = document.querySelector("#ex6_element");
+const animatedBTN = document.querySelector("#ex6_animate_button");
+let movedRight = false;
+animatedBTN.addEventListener("click", () => {
+  if (!movedRight) {
+    animatedElement.classList.remove("move-left");
+    animatedElement.classList.add("move-right");
+    movedRight = true;
+  } else {
+    animatedElement.classList.remove("move-right");
+    animatedElement.classList.add("move-left");
+    movedRight = false;
+  }
+});
+
+//Zadanie 1_4
+
