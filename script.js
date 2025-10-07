@@ -31,3 +31,27 @@ input.addEventListener("input", () => {
   }
   content2.innerHTML = errMsg;
 });
+
+//Zadanie 3
+const dragDropElem = document.querySelector("#ex3_element");
+const container3_1 = document.querySelector("#ex3_one");
+const container3_2 = document.querySelector("#ex3_two");
+
+dragDropElem.addEventListener("dragstart", (e) => {
+  console.log(e);
+});
+
+//Drag&Drop przenoszenie do drugiego elementu
+container3_2.addEventListener("dragover", (e) => {
+  e.preventDefault();
+});
+container3_2.addEventListener("drop", (e) => {
+  container3_2.prepend(dragDropElem);
+});
+//Drag&Drop przenoszenie do pierwszego elementu
+container3_1.addEventListener("dragover", (e) => {
+  e.preventDefault();
+});
+container3_1.addEventListener("drop", (e) => {
+  container3_1.prepend(dragDropElem);
+});
